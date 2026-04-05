@@ -1,13 +1,25 @@
-import { createClient } from "@supabase/supabase-js";
+import { createClient, SupabaseClient } from "@supabase/supabase-js";
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+// Server-side admin client (service_role key - sadece API route'larda kullan)
+export function getSupabaseAdmin(): SupabaseClient {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-// Client-side kullanım (anon key)
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+  if (!url || !key) {
+    throw new Error("Supabase environment variables are not set.");
+  }
 
-// Server-side kullanım (service_role key - RLS'yi bypass eder, sadece API route'larda kullan)
-export function getSupabaseAdmin() {
-  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
-  return createClient(supabaseUrl, serviceRoleKey);
+  return createClient(url, key);
+}
+
+// Client-side kullanım için (anon key)
+export function getSupabase(): SupabaseClient {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+  if (!url || !key) {
+    throw new Error("Supabase environment variables are not set.");
+  }
+
+  return createClient(url, key);
 }
