@@ -14,6 +14,10 @@ export const metadata: Metadata = {
   description:
     "VoxeraTech Software Solutions - Dijital dönüşümünüzü gerçekleştiriyoruz. Web, mobil ve kurumsal yazılım çözümleri.",
   keywords: ["yazılım", "web geliştirme", "mobil uygulama", "VoxeraTech", "software solutions"],
+  icons: {
+    icon: "/favicon-icon.png",
+    apple: "/favicon-icon.png",
+  },
 };
 
 export default function RootLayout({
