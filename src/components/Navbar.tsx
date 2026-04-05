@@ -35,11 +35,11 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <Image
-              src="/logo-icon.jpeg"
+              src="/logo-icon.png"
               alt="VoxeraTech"
               width={40}
               height={40}
-              className="rounded-sm"
+              className=""
             />
             <div className="hidden sm:block">
               <span className="text-lg font-bold tracking-wide text-foreground group-hover:text-primary transition-colors">

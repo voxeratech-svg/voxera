@@ -10,11 +10,11 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
               <Image
-                src="/logo-icon.jpeg"
+                src="/logo-icon.png"
                 alt="VoxeraTech"
                 width={32}
                 height={32}
-                className="rounded-sm"
+                className=""
               />
               <div>
                 <span className="text-base font-bold tracking-wide text-foreground">

@@ -30,11 +30,11 @@ export default function Hero() {
         <div className="flex justify-center mb-8">
           <div className="relative">
             <Image
-              src="/logo-icon.jpeg"
+              src="/logo-icon.png"
               alt="VoxeraTech"
               width={100}
               height={100}
-              className="rounded-lg glow"
+              className=""
             />
           </div>
         </div>
