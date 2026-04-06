@@ -4,15 +4,16 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const navLinks = [
-  { href: "/", label: "Ana Sayfa" },
-  { href: "/hakkimizda", label: "Hakkımızda" },
-  { href: "/hizmetlerimiz", label: "Hizmetlerimiz" },
-  { href: "/projeler", label: "Projeler" },
-  { href: "/iletisim", label: "İletişim" },
-];
+interface NavDict {
+  home: string;
+  about: string;
+  services: string;
+  projects: string;
+  contact: string;
+  cta: string;
+}
 
-export default function Navbar() {
+export default function Navbar({ dict, lang }: { dict: NavDict; lang: string }) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -21,6 +22,16 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navLinks = [
+    { href: `/${lang}`, label: dict.home },
+    { href: `/${lang}/hakkimizda`, label: dict.about },
+    { href: `/${lang}/hizmetlerimiz`, label: dict.services },
+    { href: `/${lang}/projeler`, label: dict.projects },
+    { href: `/${lang}/iletisim`, label: dict.contact },
+  ];
+
+  const otherLang = lang === "tr" ? "en" : "tr";
 
   return (
     <nav
@@ -33,7 +44,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href={`/${lang}`} className="flex items-center gap-3 group">
             <Image
               src="/logo-icon.png"
               alt="VoxeraTech - Yazılım Çözümleri"
@@ -63,11 +74,18 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            {/* Language Switcher */}
             <Link
-              href="/iletisim"
-              className="ml-4 px-5 py-2.5 text-sm font-medium bg-primary/10 text-primary border border-primary/30 rounded-lg hover:bg-primary/20 transition-all"
+              href={`/${otherLang}`}
+              className="ml-2 px-3 py-2 text-sm font-medium text-foreground/60 hover:text-primary border border-border/50 rounded-lg hover:border-primary/30 transition-all"
             >
-              Keşfetmeye Başla
+              {otherLang.toUpperCase()}
+            </Link>
+            <Link
+              href={`/${lang}/iletisim`}
+              className="ml-2 px-5 py-2.5 text-sm font-medium bg-primary/10 text-primary border border-primary/30 rounded-lg hover:bg-primary/20 transition-all"
+            >
+              {dict.cta}
             </Link>
           </div>
 
@@ -75,7 +93,7 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 text-foreground/70 hover:text-primary transition-colors"
-            aria-label="Menü"
+            aria-label="Menu"
           >
             <svg
               className="w-6 h-6"
@@ -120,6 +138,13 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <Link
+            href={`/${otherLang}`}
+            onClick={() => setIsOpen(false)}
+            className="block px-4 py-3 text-foreground/70 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors font-medium"
+          >
+            {otherLang === "tr" ? "Türkçe" : "English"}
+          </Link>
         </div>
       </div>
     </nav>

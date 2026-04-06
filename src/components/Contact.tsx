@@ -2,7 +2,30 @@
 
 import { useState } from "react";
 
-export default function Contact() {
+interface ContactDict {
+  label: string;
+  title: string;
+  subtitle: string;
+  emailLabel: string;
+  locationLabel: string;
+  locationValue: string;
+  hoursLabel: string;
+  hoursValue: string;
+  formName: string;
+  formEmail: string;
+  formSubject: string;
+  formMessage: string;
+  formNamePlaceholder: string;
+  formEmailPlaceholder: string;
+  formSubjectPlaceholder: string;
+  formMessagePlaceholder: string;
+  sending: string;
+  sent: string;
+  error: string;
+  submit: string;
+}
+
+export default function Contact({ dict }: { dict: ContactDict }) {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -42,14 +65,14 @@ export default function Contact() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3">
-            İletişim
+            {dict.label}
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-            Bizimle İletişime Geçin
+            {dict.title}
           </h2>
           <div className="w-20 h-1 bg-primary/50 mx-auto mt-4 rounded-full" />
           <p className="text-foreground/50 mt-6 max-w-2xl mx-auto">
-            Projenizi hayata geçirmek için hemen bizimle iletişime geçin.
+            {dict.subtitle}
           </p>
         </div>
 
@@ -64,7 +87,7 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-1">E-posta</h4>
+                  <h4 className="font-semibold text-foreground mb-1">{dict.emailLabel}</h4>
                   <a
                     href="mailto:voxeratech@gmail.com"
                     className="text-foreground/50 text-sm hover:text-primary transition-colors"
@@ -84,8 +107,8 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-1">Konum</h4>
-                  <p className="text-foreground/50 text-sm">İstanbul, Türkiye</p>
+                  <h4 className="font-semibold text-foreground mb-1">{dict.locationLabel}</h4>
+                  <p className="text-foreground/50 text-sm">{dict.locationValue}</p>
                 </div>
               </div>
             </div>
@@ -98,10 +121,8 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-1">Çalışma Saatleri</h4>
-                  <p className="text-foreground/50 text-sm">
-                    Pazartesi - Cuma: 09:00 - 18:00
-                  </p>
+                  <h4 className="font-semibold text-foreground mb-1">{dict.hoursLabel}</h4>
+                  <p className="text-foreground/50 text-sm">{dict.hoursValue}</p>
                 </div>
               </div>
             </div>
@@ -116,7 +137,7 @@ export default function Contact() {
               <div className="grid sm:grid-cols-2 gap-5">
                 <div>
                   <label className="block text-sm text-foreground/70 mb-2">
-                    Adınız Soyadınız
+                    {dict.formName}
                   </label>
                   <input
                     type="text"
@@ -124,12 +145,12 @@ export default function Contact() {
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-primary/50 transition-colors"
-                    placeholder="Adınız Soyadınız"
+                    placeholder={dict.formNamePlaceholder}
                   />
                 </div>
                 <div>
                   <label className="block text-sm text-foreground/70 mb-2">
-                    E-posta Adresiniz
+                    {dict.formEmail}
                   </label>
                   <input
                     type="email"
@@ -137,13 +158,13 @@ export default function Contact() {
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-primary/50 transition-colors"
-                    placeholder="john@example.com"
+                    placeholder={dict.formEmailPlaceholder}
                   />
                 </div>
               </div>
               <div>
                 <label className="block text-sm text-foreground/70 mb-2">
-                  Konu
+                  {dict.formSubject}
                 </label>
                 <input
                   type="text"
@@ -151,12 +172,12 @@ export default function Contact() {
                   value={form.subject}
                   onChange={(e) => setForm({ ...form, subject: e.target.value })}
                   className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-primary/50 transition-colors"
-                  placeholder="Proje hakkında bilgi almak istiyorum"
+                  placeholder={dict.formSubjectPlaceholder}
                 />
               </div>
               <div>
                 <label className="block text-sm text-foreground/70 mb-2">
-                  Mesajınız
+                  {dict.formMessage}
                 </label>
                 <textarea
                   required
@@ -164,7 +185,7 @@ export default function Contact() {
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
                   className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-primary/50 transition-colors resize-none"
-                  placeholder="Mesajınızı buraya yazın..."
+                  placeholder={dict.formMessagePlaceholder}
                 />
               </div>
               <button
@@ -173,12 +194,12 @@ export default function Contact() {
                 className="w-full py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-light transition-all glow hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {status === "sending"
-                  ? "Gönderiliyor..."
+                  ? dict.sending
                   : status === "sent"
-                  ? "Mesajınız Gönderildi!"
+                  ? dict.sent
                   : status === "error"
-                  ? "Hata oluştu, tekrar deneyin"
-                  : "Mesaj Gönder"}
+                  ? dict.error
+                  : dict.submit}
               </button>
             </form>
           </div>

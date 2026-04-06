@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "cta": "Get Started"
+  },
+  "hero": {
+    "company": "VoxeraTech",
+    "tagline": "Software Solutions",
+    "headline1": "THE ",
+    "headlineHighlight": "LUMINOUS",
+    "headline2": "FUTURE",
+    "subtitle": "We drive your digital transformation. We carry your business into the future with innovative software solutions.",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "Contact Us",
+    "indicator1Title": "Future Ready",
+    "indicator1Sub": "Innovative Technologies",
+    "indicator2Title": "Form & Color Synthesis",
+    "indicator2Sub": "Creative Design",
+    "scrollLabel": "Go to contact section"
+  },
+  "about": {
+    "label": "About Us",
+    "title": "Who Are We?",
+    "heading": "Shaping the Future",
+    "headingHighlight": " with Technology",
+    "p1": "VoxeraTech is a technology company that offers modern software solutions. With our team specialized in web applications, mobile applications, enterprise software, and digital transformation projects, we are your trusted partner on your business's digital journey.",
+    "p2": "By deeply understanding our customers' needs and using the latest technologies, we deliver scalable, secure, and high-performance solutions. In every project, we prioritize quality, innovation, and customer satisfaction.",
+    "missionTitle": "Our Mission",
+    "missionText": "To accelerate the digital transformation of businesses with the most innovative technologies and provide a competitive advantage.",
+    "visionTitle": "Our Vision",
+    "visionText": "To become a globally recognized, trusted, and innovative software solutions partner.",
+    "stats": [
+      { "value": "50+", "label": "Completed Projects" },
+      { "value": "30+", "label": "Happy Clients" },
+      { "value": "5+", "label": "Years of Experience" },
+      { "value": "24/7", "label": "Support" }
+    ]
+  },
+  "services": {
+    "label": "Our Services",
+    "title": "What We Do?",
+    "subtitle": "We offer comprehensive software solutions for your business's digital needs.",
+    "items": [
+      {
+        "title": "Web Development",
+        "description": "Modern and responsive web applications. We develop high-performance web solutions with current technologies like React, Next.js, and Vue.js."
+      },
+      {
+        "title": "Mobile App",
+        "description": "Native and cross-platform mobile applications for iOS and Android platforms. Fast and effective solutions with React Native and Flutter."
+      },
+      {
+        "title": "Database & Backend",
+        "description": "Scalable and secure backend architectures. RESTful API, GraphQL, microservice architectures, and cloud solutions."
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "User-centered, modern, and impressive interface designs. Usability testing and user experience optimization."
+      }
+    ]
+  },
+  "projects": {
+    "label": "Our Projects",
+    "title": "Recent Work",
+    "subtitle": "Some of the projects we've brought to life for our clients and in-house.",
+    "featuresLabel": "Features",
+    "techLabel": "Tech Stack",
+    "summaryLabel": "Project Summary",
+    "items": [
+      {
+        "title": "ebcturkiye.com",
+        "subtitle": "Personal Portfolio & CV Platform",
+        "category": "Web Development",
+        "bgLabel": "EBC Turkey",
+        "displayUrl": "ebcturkiye.com",
+        "description": "A modern personal portfolio website designed and developed from scratch for Enes Buğra Cengiz. The site consists of Home, About Me, and Contact pages, presenting all professional information including work experience, technical skills, featured projects, and certifications in an elegant and responsive interface.",
+        "features": [
+          "Responsive & modern design",
+          "Work experience and education history",
+          "Technical skills list",
+          "Featured projects showcase",
+          "Contact form integration",
+          "Multi-page structure (Next.js routing)"
+        ],
+        "highlights": [
+          { "label": "Personal Portfolio", "value": "Enes Buğra Cengiz" },
+          { "label": "Work Experience", "value": "3+ Years" },
+          { "label": "Education", "value": "Computer Eng. & MIS" },
+          { "label": "Certificates", "value": "3 Certificates" }
+        ],
+        "ctaLabel": "Visit Website"
+      },
+      {
+        "title": "WordPulse: Learn Fast",
+        "subtitle": "Apple Watch Vocabulary Learning App",
+        "category": "Mobile App / watchOS",
+        "bgLabel": "WordPulse",
+        "displayUrl": "View on App Store",
+        "description": "Developed exclusively for Apple Watch, WordPulse lets you learn foreign language vocabulary quickly and effectively through wrist gestures. The app offers personalized flashcards using the spaced repetition method, making it easy to learn during your daily routine.",
+        "features": [
+          "Dedicated watchOS interface for Apple Watch",
+          "Spaced repetition algorithm",
+          "Personalized flashcards",
+          "Quick learning mode",
+          "Daily reminder notifications",
+          "Live on App Store"
+        ],
+        "highlights": [
+          { "label": "Platform", "value": "Apple Watch" },
+          { "label": "Published", "value": "App Store" },
+          { "label": "Method", "value": "Spaced Repetition" },
+          { "label": "Language Support", "value": "Multi-Language" }
+        ],
+        "ctaLabel": "View on App Store"
+      }
+    ]
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Get in Touch with Us",
+    "subtitle": "Contact us to bring your project to life.",
+    "emailLabel": "Email",
+    "locationLabel": "Location",
+    "locationValue": "Istanbul, Turkey",
+    "hoursLabel": "Working Hours",
+    "hoursValue": "Monday - Friday: 09:00 - 18:00",
+    "formName": "Full Name",
+    "formEmail": "Email Address",
+    "formSubject": "Subject",
+    "formMessage": "Your Message",
+    "formNamePlaceholder": "Your full name",
+    "formEmailPlaceholder": "john@example.com",
+    "formSubjectPlaceholder": "I'd like to learn more about a project",
+    "formMessagePlaceholder": "Write your message here...",
+    "sending": "Sending...",
+    "sent": "Message Sent Successfully!",
+    "error": "An error occurred, please try again",
+    "submit": "Send Message"
+  },
+  "footer": {
+    "tagline": "Your trusted technology partner in digital transformation.",
+    "quickLinks": "Quick Links",
+    "servicesTitle": "Services",
+    "serviceItems": ["Web Development", "Mobile App", "UI/UX Design"],
+    "contactTitle": "Contact",
+    "location": "Istanbul, Turkey",
+    "copyright": "All rights reserved."
+  },
+  "metadata": {
+    "homeTitle": "VoxeraTech - Software Solutions | Web, Mobile & AI",
+    "homeDescription": "VoxeraTech Software Solutions - Turkey's innovative software company. Web development, mobile applications, AI solutions, UI/UX design, and enterprise software services to drive your digital transformation.",
+    "aboutTitle": "About Us - VoxeraTech Software Company",
+    "aboutDescription": "Learn about VoxeraTech. Our mission, vision, and expert team as an innovative software company based in Turkey.",
+    "servicesTitle": "Services - Web, Mobile, AI Software Solutions",
+    "servicesDescription": "VoxeraTech software services: professional web development, mobile applications, AI integration, UI/UX design, and enterprise software solutions.",
+    "projectsTitle": "Projects - VoxeraTech Software Portfolio",
+    "projectsDescription": "Successful projects developed by VoxeraTech. Explore our websites, mobile applications, and enterprise software solutions.",
+    "contactTitle": "Contact - Start Your Project with VoxeraTech",
+    "contactDescription": "Get in touch with VoxeraTech. Get a free quote for your software project. Reach us for web, mobile, and AI solutions."
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "services": "Hizmetlerimiz",
+    "projects": "Projeler",
+    "contact": "İletişim",
+    "cta": "Keşfetmeye Başla"
+  },
+  "hero": {
+    "company": "VoxeraTech",
+    "tagline": "Software Solutions",
+    "headline1": "THE ",
+    "headlineHighlight": "LUMINOUS",
+    "headline2": "FUTURE",
+    "subtitle": "Dijital dönüşümünüzü gerçekleştiriyoruz. Yenilikçi yazılım çözümleri ile işletmenizi geleceğe taşıyoruz.",
+    "ctaPrimary": "Keşfetmeye Başla",
+    "ctaSecondary": "İletişime Geç",
+    "indicator1Title": "Geleceğe Hazır",
+    "indicator1Sub": "Yenilikçi Teknolojiler",
+    "indicator2Title": "Form ve Renk Sentezi",
+    "indicator2Sub": "Yaratıcı Tasarım",
+    "scrollLabel": "İletişim bölümüne git"
+  },
+  "about": {
+    "label": "Hakkımızda",
+    "title": "Biz Kimiz?",
+    "heading": "Teknoloji ile Geleceği",
+    "headingHighlight": " Şekillendiriyoruz",
+    "p1": "VoxeraTech, modern yazılım çözümleri sunan bir teknoloji şirketidir. Web uygulamaları, mobil uygulamalar, kurumsal yazılımlar ve dijital dönüşüm projelerinde uzmanlaşmış ekibimizle, işletmenizin dijital yolculuğunda güvenilir partneriniz oluyoruz.",
+    "p2": "Müşterilerimizin ihtiyaçlarını derinlemesine anlayarak, en son teknolojileri kullanarak ölçeklenebilir, güvenli ve performanslı çözümler üretiyoruz. Her projede kalite, yenilikçilik ve müşteri memnuniyetini ön planda tutuyoruz.",
+    "missionTitle": "Misyonumuz",
+    "missionText": "İşletmelerin dijital dönüşümünü en yenilikçi teknolojilerle hızlandırmak ve rekabet avantajı sağlamak.",
+    "visionTitle": "Vizyonumuz",
+    "visionText": "Türkiye ve dünyada tanınan, güvenilir ve yenilikçi bir yazılım çözüm ortağı olmak.",
+    "stats": [
+      { "value": "50+", "label": "Tamamlanan Proje" },
+      { "value": "30+", "label": "Mutlu Müşteri" },
+      { "value": "5+", "label": "Yıllık Deneyim" },
+      { "value": "7/24", "label": "Destek" }
+    ]
+  },
+  "services": {
+    "label": "Hizmetlerimiz",
+    "title": "Neler Yapıyoruz?",
+    "subtitle": "İşletmenizin dijital ihtiyaçlarına yönelik kapsamlı yazılım çözümleri sunuyoruz.",
+    "items": [
+      {
+        "title": "Web Geliştirme",
+        "description": "Modern ve responsive web uygulamaları. React, Next.js, Vue.js gibi güncel teknolojilerle yüksek performanslı web çözümleri geliştiriyoruz."
+      },
+      {
+        "title": "Mobil Uygulama",
+        "description": "iOS ve Android platformları için native ve cross-platform mobil uygulamalar. React Native ve Flutter ile hızlı ve etkili çözümler."
+      },
+      {
+        "title": "Veritabanı & Backend",
+        "description": "Ölçeklenebilir ve güvenli backend mimarileri. RESTful API, GraphQL, mikroservis mimarileri ve bulut çözümleri."
+      },
+      {
+        "title": "UI/UX Tasarım",
+        "description": "Kullanıcı odaklı, modern ve etkileyici arayüz tasarımları. Kullanılabilirlik testleri ve kullanıcı deneyimi optimizasyonu."
+      }
+    ]
+  },
+  "projects": {
+    "label": "Projelerimiz",
+    "title": "Son Çalışmalarımız",
+    "subtitle": "Müşterilerimiz ve kendi bünyemizde hayata geçirdiğimiz projelerden bazıları.",
+    "featuresLabel": "Özellikler",
+    "techLabel": "Teknoloji Yığını",
+    "summaryLabel": "Proje Özeti",
+    "items": [
+      {
+        "title": "ebcturkiye.com",
+        "subtitle": "Kişisel Portföy & CV Platformu",
+        "category": "Web Geliştirme",
+        "bgLabel": "EBC Türkiye",
+        "displayUrl": "ebcturkiye.com",
+        "description": "Enes Buğra Cengiz için sıfırdan tasarlanıp geliştirilen modern kişisel portföy sitesi. Ana Sayfa, Hakkımda ve İletişim sayfalarından oluşan site; iş deneyimi, teknik yetkinlikler, öne çıkan projeler ve sertifikalar gibi tüm profesyonel bilgileri şık ve responsive bir arayüzde sunar.",
+        "features": [
+          "Responsive & modern tasarım",
+          "Kişisel iş deneyimi ve eğitim geçmişi",
+          "Teknik yetkinlik listesi",
+          "Öne çıkan projeler vitrini",
+          "İletişim formu entegrasyonu",
+          "Çoklu sayfa yapısı (Next.js routing)"
+        ],
+        "highlights": [
+          { "label": "Kişisel Portföy", "value": "Enes Buğra Cengiz" },
+          { "label": "İş Deneyimi", "value": "3+ Yıl" },
+          { "label": "Eğitim", "value": "Bilgisayar Müh. & YBS" },
+          { "label": "Sertifika", "value": "3 Sertifika" }
+        ],
+        "ctaLabel": "Siteyi Ziyaret Et"
+      },
+      {
+        "title": "WordPulse: Learn Fast",
+        "subtitle": "Apple Watch Kelime Öğrenme Uygulaması",
+        "category": "Mobil Uygulama / watchOS",
+        "bgLabel": "WordPulse",
+        "displayUrl": "App Store'da İncele",
+        "description": "Apple Watch için özel olarak geliştirilen WordPulse, bilek hareketleriyle yabancı dil kelimelerini hızlı ve etkili şekilde öğrenmenizi sağlar. Spaced repetition (aralıklı tekrar) yöntemiyle kişiselleştirilmiş kelime kartları sunan uygulama, günlük rutin içinde öğrenmeyi kolaylaştırır.",
+        "features": [
+          "Apple Watch'a özel watchOS arayüzü",
+          "Spaced repetition algoritması",
+          "Kişiselleştirilmiş kelime kartları",
+          "Hızlı öğrenme modu",
+          "Günlük hatırlatıcı bildirimleri",
+          "App Store'da yayında"
+        ],
+        "highlights": [
+          { "label": "Platform", "value": "Apple Watch" },
+          { "label": "Yayın", "value": "App Store" },
+          { "label": "Yöntem", "value": "Spaced Repetition" },
+          { "label": "Dil Desteği", "value": "Çoklu Dil" }
+        ],
+        "ctaLabel": "App Store'da İncele"
+      }
+    ]
+  },
+  "contact": {
+    "label": "İletişim",
+    "title": "Bizimle İletişime Geçin",
+    "subtitle": "Projenizi hayata geçirmek için hemen bizimle iletişime geçin.",
+    "emailLabel": "E-posta",
+    "locationLabel": "Konum",
+    "locationValue": "İstanbul, Türkiye",
+    "hoursLabel": "Çalışma Saatleri",
+    "hoursValue": "Pazartesi - Cuma: 09:00 - 18:00",
+    "formName": "Adınız Soyadınız",
+    "formEmail": "E-posta Adresiniz",
+    "formSubject": "Konu",
+    "formMessage": "Mesajınız",
+    "formNamePlaceholder": "Adınız Soyadınız",
+    "formEmailPlaceholder": "john@example.com",
+    "formSubjectPlaceholder": "Proje hakkında bilgi almak istiyorum",
+    "formMessagePlaceholder": "Mesajınızı buraya yazın...",
+    "sending": "Gönderiliyor...",
+    "sent": "Mesajınız Gönderildi!",
+    "error": "Hata oluştu, tekrar deneyin",
+    "submit": "Mesaj Gönder"
+  },
+  "footer": {
+    "tagline": "Dijital dönüşümünüzde güvenilir teknoloji ortağınız.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "servicesTitle": "Hizmetler",
+    "serviceItems": ["Web Geliştirme", "Mobil Uygulama", "UI/UX Tasarım"],
+    "contactTitle": "İletişim",
+    "location": "İstanbul, Türkiye",
+    "copyright": "Tüm hakları saklıdır."
+  },
+  "metadata": {
+    "homeTitle": "VoxeraTech - Yazılım Çözümleri | Web, Mobil & Yapay Zeka",
+    "homeDescription": "VoxeraTech Software Solutions - Türkiye'nin yenilikçi yazılım şirketi. Web geliştirme, mobil uygulama, yapay zeka çözümleri, UI/UX tasarım ve kurumsal yazılım hizmetleri ile dijital dönüşümünüzü gerçekleştiriyoruz.",
+    "aboutTitle": "Hakkımızda - VoxeraTech Yazılım Şirketi",
+    "aboutDescription": "VoxeraTech hakkında bilgi edinin. Türkiye merkezli yenilikçi yazılım şirketi olarak misyonumuz, vizyonumuz ve uzman ekibimiz.",
+    "servicesTitle": "Hizmetlerimiz - Web, Mobil, Yapay Zeka Yazılım Çözümleri",
+    "servicesDescription": "VoxeraTech yazılım hizmetleri: profesyonel web geliştirme, mobil uygulama, yapay zeka entegrasyonu, UI/UX tasarım ve kurumsal yazılım çözümleri.",
+    "projectsTitle": "Projeler - VoxeraTech Yazılım Portföyü",
+    "projectsDescription": "VoxeraTech tarafından geliştirilen başarılı projeler. Web siteleri, mobil uygulamalar ve kurumsal yazılım çözümlerimizi inceleyin.",
+    "contactTitle": "İletişim - VoxeraTech ile Projenizi Başlatın",
+    "contactDescription": "VoxeraTech ile iletişime geçin. Yazılım projeniz için ücretsiz teklif alın. Web, mobil ve yapay zeka çözümleri için bize ulaşın."
+  }
+}

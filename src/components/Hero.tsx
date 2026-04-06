@@ -4,7 +4,23 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export default function Hero() {
+interface HeroDict {
+  company: string;
+  tagline: string;
+  headline1: string;
+  headlineHighlight: string;
+  headline2: string;
+  subtitle: string;
+  ctaPrimary: string;
+  ctaSecondary: string;
+  indicator1Title: string;
+  indicator1Sub: string;
+  indicator2Title: string;
+  indicator2Sub: string;
+  scrollLabel: string;
+}
+
+export default function Hero({ dict, lang }: { dict: HeroDict; lang: string }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -43,40 +59,39 @@ export default function Hero() {
         {/* Company name */}
         <div className="mb-4">
           <h2 className="text-lg sm:text-xl tracking-[0.3em] text-primary-light/70 uppercase font-light">
-            VoxeraTech
+            {dict.company}
           </h2>
           <p className="text-xs tracking-[0.5em] text-foreground/30 uppercase mt-1">
-            Software Solutions
+            {dict.tagline}
           </p>
         </div>
 
         {/* Main headline */}
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight">
-          <span className="text-foreground">THE </span>
-          <span className="text-primary glow-text">LUMINOUS</span>
+          <span className="text-foreground">{dict.headline1}</span>
+          <span className="text-primary glow-text">{dict.headlineHighlight}</span>
           <br />
-          <span className="text-foreground">FUTURE</span>
+          <span className="text-foreground">{dict.headline2}</span>
         </h1>
 
         {/* Subtitle */}
         <p className="text-lg sm:text-xl text-foreground/50 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Dijital dönüşümünüzü gerçekleştiriyoruz. Yenilikçi yazılım çözümleri
-          ile işletmenizi geleceğe taşıyoruz.
+          {dict.subtitle}
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
-            href="/hizmetlerimiz"
+            href={`/${lang}/hizmetlerimiz`}
             className="px-8 py-4 bg-primary text-background font-semibold rounded-lg hover:bg-primary-light transition-all glow hover:scale-105"
           >
-            Keşfetmeye Başla
+            {dict.ctaPrimary}
           </Link>
           <Link
-            href="/iletisim"
+            href={`/${lang}/iletisim`}
             className="px-8 py-4 border border-primary/30 text-primary rounded-lg hover:bg-primary/10 transition-all hover:scale-105"
           >
-            İletişime Geç
+            {dict.ctaSecondary}
           </Link>
         </div>
 
@@ -84,14 +99,14 @@ export default function Hero() {
         <div className="mt-16 flex items-center justify-center gap-12 text-sm text-foreground/30">
           <div className="text-center">
             <p className="text-2xl font-bold text-primary">01</p>
-            <p className="mt-1">Geleceğe Hazır</p>
-            <p className="text-xs">Yenilikçi Teknolojiler</p>
+            <p className="mt-1">{dict.indicator1Title}</p>
+            <p className="text-xs">{dict.indicator1Sub}</p>
           </div>
           <div className="w-px h-12 bg-border" />
           <div className="text-center">
             <p className="text-2xl font-bold text-primary">02</p>
-            <p className="mt-1">Form ve Renk Sentezi</p>
-            <p className="text-xs">Yaratıcı Tasarım</p>
+            <p className="mt-1">{dict.indicator2Title}</p>
+            <p className="text-xs">{dict.indicator2Sub}</p>
           </div>
         </div>
       </div>
@@ -99,7 +114,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <button
         onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-        aria-label="İletişim bölümüne git"
+        aria-label={dict.scrollLabel}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer group"
       >
         <svg

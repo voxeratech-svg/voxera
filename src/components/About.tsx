@@ -1,23 +1,30 @@
 "use client";
 
-export default function About() {
-  const stats = [
-    { value: "50+", label: "Tamamlanan Proje" },
-    { value: "30+", label: "Mutlu Müşteri" },
-    { value: "5+", label: "Yıllık Deneyim" },
-    { value: "7/24", label: "Destek" },
-  ];
+interface AboutDict {
+  label: string;
+  title: string;
+  heading: string;
+  headingHighlight: string;
+  p1: string;
+  p2: string;
+  missionTitle: string;
+  missionText: string;
+  visionTitle: string;
+  visionText: string;
+  stats: { value: string; label: string }[];
+}
 
+export default function About({ dict }: { dict: AboutDict }) {
   return (
     <section id="about" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <p className="text-primary text-sm tracking-[0.3em] uppercase mb-3">
-            Hakkımızda
+            {dict.label}
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-            Biz Kimiz?
+            {dict.title}
           </h2>
           <div className="w-20 h-1 bg-primary/50 mx-auto mt-4 rounded-full" />
         </div>
@@ -26,21 +33,11 @@ export default function About() {
           {/* Left - Text */}
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-foreground">
-              Teknoloji ile Geleceği
-              <span className="text-primary"> Şekillendiriyoruz</span>
+              {dict.heading}
+              <span className="text-primary">{dict.headingHighlight}</span>
             </h3>
-            <p className="text-foreground/60 leading-relaxed">
-              VoxeraTech, modern yazılım çözümleri sunan bir teknoloji şirketidir.
-              Web uygulamaları, mobil uygulamalar, kurumsal yazılımlar ve dijital
-              dönüşüm projelerinde uzmanlaşmış ekibimizle, işletmenizin dijital
-              yolculuğunda güvenilir partneriniz oluyoruz.
-            </p>
-            <p className="text-foreground/60 leading-relaxed">
-              Müşterilerimizin ihtiyaçlarını derinlemesine anlayarak, en son
-              teknolojileri kullanarak ölçeklenebilir, güvenli ve performanslı
-              çözümler üretiyoruz. Her projede kalite, yenilikçilik ve müşteri
-              memnuniyetini ön planda tutuyoruz.
-            </p>
+            <p className="text-foreground/60 leading-relaxed">{dict.p1}</p>
+            <p className="text-foreground/60 leading-relaxed">{dict.p2}</p>
 
             {/* Mission & Vision */}
             <div className="grid sm:grid-cols-2 gap-4 pt-4">
@@ -50,11 +47,8 @@ export default function About() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h4 className="font-semibold text-foreground mb-2">Misyonumuz</h4>
-                <p className="text-sm text-foreground/50">
-                  İşletmelerin dijital dönüşümünü en yenilikçi teknolojilerle
-                  hızlandırmak ve rekabet avantajı sağlamak.
-                </p>
+                <h4 className="font-semibold text-foreground mb-2">{dict.missionTitle}</h4>
+                <p className="text-sm text-foreground/50">{dict.missionText}</p>
               </div>
               <div className="p-5 rounded-xl bg-surface border border-border gradient-border">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
@@ -63,18 +57,15 @@ export default function About() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                   </svg>
                 </div>
-                <h4 className="font-semibold text-foreground mb-2">Vizyonumuz</h4>
-                <p className="text-sm text-foreground/50">
-                  Türkiye ve dünyada tanınan, güvenilir ve yenilikçi bir yazılım
-                  çözüm ortağı olmak.
-                </p>
+                <h4 className="font-semibold text-foreground mb-2">{dict.visionTitle}</h4>
+                <p className="text-sm text-foreground/50">{dict.visionText}</p>
               </div>
             </div>
           </div>
 
           {/* Right - Stats */}
           <div className="grid grid-cols-2 gap-4">
-            {stats.map((stat, i) => (
+            {dict.stats.map((stat, i) => (
               <div
                 key={i}
                 className="p-8 rounded-xl bg-surface border border-border text-center hover:border-primary/30 transition-all hover:glow gradient-border group"

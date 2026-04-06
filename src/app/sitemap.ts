@@ -1,38 +1,28 @@
 import type { MetadataRoute } from "next";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://voxeratech.com";
+const baseUrl = "https://voxeratech.com";
+const locales = ["tr", "en"];
 
-  return [
-    {
-      url: baseUrl,
+const pages = [
+  { path: "", changeFrequency: "weekly" as const, priority: 1 },
+  { path: "/hakkimizda", changeFrequency: "monthly" as const, priority: 0.8 },
+  { path: "/hizmetlerimiz", changeFrequency: "weekly" as const, priority: 0.9 },
+  { path: "/projeler", changeFrequency: "weekly" as const, priority: 0.8 },
+  { path: "/iletisim", changeFrequency: "monthly" as const, priority: 0.7 },
+];
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return locales.flatMap((locale) =>
+    pages.map((page) => ({
+      url: `${baseUrl}/${locale}${page.path}`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/hakkimizda`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/hizmetlerimiz`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/projeler`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/iletisim`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-  ];
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
+      alternates: {
+        languages: Object.fromEntries(
+          locales.map((l) => [l, `${baseUrl}/${l}${page.path}`])
+        ),
+      },
+    }))
+  );
 }

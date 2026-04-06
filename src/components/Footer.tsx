@@ -1,14 +1,46 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Footer() {
+interface FooterDict {
+  tagline: string;
+  quickLinks: string;
+  servicesTitle: string;
+  serviceItems: string[];
+  contactTitle: string;
+  location: string;
+  copyright: string;
+}
+
+interface NavDict {
+  home: string;
+  about: string;
+  services: string;
+  projects: string;
+}
+
+export default function Footer({
+  dict,
+  navDict,
+  lang,
+}: {
+  dict: FooterDict;
+  navDict: NavDict;
+  lang: string;
+}) {
+  const footerLinks = [
+    { href: `/${lang}`, label: navDict.home },
+    { href: `/${lang}/hakkimizda`, label: navDict.about },
+    { href: `/${lang}/hizmetlerimiz`, label: navDict.services },
+    { href: `/${lang}/projeler`, label: navDict.projects },
+  ];
+
   return (
     <footer className="border-t border-border bg-surface/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-4">
+            <Link href={`/${lang}`} className="flex items-center gap-3 mb-4">
               <Image
                 src="/logo-icon.png"
                 alt="VoxeraTech - Yazılım Çözümleri"
@@ -23,22 +55,17 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-foreground/40 text-sm leading-relaxed">
-              Dijital dönüşümünüzde güvenilir teknoloji ortağınız.
+              {dict.tagline}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="font-semibold text-foreground mb-4 text-sm">
-              Hızlı Bağlantılar
+              {dict.quickLinks}
             </h4>
             <ul className="space-y-2">
-              {[
-                { href: "/", label: "Ana Sayfa" },
-                { href: "/hakkimizda", label: "Hakkımızda" },
-                { href: "/hizmetlerimiz", label: "Hizmetlerimiz" },
-                { href: "/projeler", label: "Projeler" },
-              ].map((link) => (
+              {footerLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -54,23 +81,23 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4 className="font-semibold text-foreground mb-4 text-sm">
-              Hizmetler
+              {dict.servicesTitle}
             </h4>
             <ul className="space-y-2 text-foreground/40 text-sm">
-              <li>Web Geliştirme</li>
-              <li>Mobil Uygulama</li>
-              <li>UI/UX Tasarım</li>
+              {dict.serviceItems.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
             </ul>
           </div>
 
           {/* Contact */}
           <div>
             <h4 className="font-semibold text-foreground mb-4 text-sm">
-              İletişim
+              {dict.contactTitle}
             </h4>
             <ul className="space-y-2 text-foreground/40 text-sm">
               <li>voxeratech@gmail.com</li>
-              <li>İstanbul, Türkiye</li>
+              <li>{dict.location}</li>
             </ul>
           </div>
         </div>
@@ -78,7 +105,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-foreground/30 text-sm">
-            &copy; {new Date().getFullYear()} VoxeraTech. Tüm hakları saklıdır.
+            &copy; {new Date().getFullYear()} VoxeraTech. {dict.copyright}
           </p>
           <div className="flex items-center gap-4">
             <span className="text-foreground/20 text-xs">
