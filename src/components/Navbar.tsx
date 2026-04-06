@@ -37,9 +37,9 @@ export default function Navbar() {
             <Image
               src="/logo-icon.png"
               alt="VoxeraTech - Yazılım Çözümleri"
-              width={50}
-              height={27}
-              className="w-[50px] h-auto"
+              width={90}
+              height={49}
+              className="w-[90px] h-auto"
               priority
             />
             <div className="hidden sm:block">

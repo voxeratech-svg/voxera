@@ -32,9 +32,9 @@ export default function Hero() {
             <Image
               src="/logo-icon.png"
               alt="VoxeraTech - Yazılım Çözümleri"
-              width={120}
-              height={65}
-              className="w-[120px] h-auto"
+              width={220}
+              height={120}
+              className="w-[220px] h-auto"
               priority
             />
           </div>
