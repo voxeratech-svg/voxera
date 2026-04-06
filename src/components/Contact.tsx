@@ -85,7 +85,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">Konum</h4>
-                  <p className="text-foreground/50 text-sm">Türkiye</p>
+                  <p className="text-foreground/50 text-sm">İstanbul, Türkiye</p>
                 </div>
               </div>
             </div>

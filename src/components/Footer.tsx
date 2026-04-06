@@ -70,7 +70,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-foreground/40 text-sm">
               <li>voxeratech@gmail.com</li>
-              <li>Türkiye</li>
+              <li>İstanbul, Türkiye</li>
             </ul>
           </div>
         </div>
