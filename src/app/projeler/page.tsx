@@ -1,8 +1,9 @@
 import Projects from "@/components/Projects";
 
 export const metadata = {
-  title: "Projeler - VoxeraTech",
-  description: "VoxeraTech tarafından geliştirilen projeler ve çalışmalar.",
+  title: "Projeler - VoxeraTech Yazılım Portföyü",
+  description: "VoxeraTech tarafından geliştirilen başarılı projeler. Web siteleri, mobil uygulamalar ve kurumsal yazılım çözümlerimizi inceleyin.",
+  alternates: { canonical: "/projeler" },
 };
 
 export default function ProjelerPage() {

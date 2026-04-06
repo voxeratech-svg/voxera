@@ -31,10 +31,11 @@ export default function Hero() {
           <div className="relative">
             <Image
               src="/logo-icon.png"
-              alt="VoxeraTech"
-              width={100}
-              height={100}
-              className=""
+              alt="VoxeraTech - Yazılım Çözümleri"
+              width={120}
+              height={65}
+              className="w-[120px] h-auto"
+              priority
             />
           </div>
         </div>

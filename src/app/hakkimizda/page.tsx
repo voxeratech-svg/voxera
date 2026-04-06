@@ -1,8 +1,9 @@
 import About from "@/components/About";
 
 export const metadata = {
-  title: "Hakkımızda - VoxeraTech",
-  description: "VoxeraTech hakkında bilgi edinin. Misyonumuz, vizyonumuz ve ekibimiz.",
+  title: "Hakkımızda - VoxeraTech Yazılım Şirketi",
+  description: "VoxeraTech hakkında bilgi edinin. Türkiye merkezli yenilikçi yazılım şirketi olarak misyonumuz, vizyonumuz ve uzman ekibimiz.",
+  alternates: { canonical: "/hakkimizda" },
 };
 
 export default function HakkimizdaPage() {

@@ -1,8 +1,9 @@
 import Services from "@/components/Services";
 
 export const metadata = {
-  title: "Hizmetlerimiz - VoxeraTech",
-  description: "VoxeraTech yazılım hizmetleri: Web geliştirme, mobil uygulama, yapay zeka ve daha fazlası.",
+  title: "Hizmetlerimiz - Web, Mobil, Yapay Zeka Yazılım Çözümleri",
+  description: "VoxeraTech yazılım hizmetleri: profesyonel web geliştirme, mobil uygulama, yapay zeka entegrasyonu, UI/UX tasarım ve kurumsal yazılım çözümleri.",
+  alternates: { canonical: "/hizmetlerimiz" },
 };
 
 export default function HizmetlerimizPage() {

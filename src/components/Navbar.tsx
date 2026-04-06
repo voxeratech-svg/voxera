@@ -36,10 +36,11 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3 group">
             <Image
               src="/logo-icon.png"
-              alt="VoxeraTech"
-              width={90}
-              height={90}
-              className=""
+              alt="VoxeraTech - Yazılım Çözümleri"
+              width={50}
+              height={27}
+              className="w-[50px] h-auto"
+              priority
             />
             <div className="hidden sm:block">
               <span className="text-lg font-bold tracking-wide text-foreground group-hover:text-primary transition-colors">

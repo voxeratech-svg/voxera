@@ -11,10 +11,10 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3 mb-4">
               <Image
                 src="/logo-icon.png"
-                alt="VoxeraTech"
-                width={32}
-                height={32}
-                className=""
+                alt="VoxeraTech - Yazılım Çözümleri"
+                width={36}
+                height={20}
+                className="w-[36px] h-auto"
               />
               <div>
                 <span className="text-base font-bold tracking-wide text-foreground">
