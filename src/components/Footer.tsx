@@ -59,7 +59,6 @@ export default function Footer() {
             <ul className="space-y-2 text-foreground/40 text-sm">
               <li>Web Geliştirme</li>
               <li>Mobil Uygulama</li>
-              <li>Yapay Zeka Çözümleri</li>
               <li>UI/UX Tasarım</li>
             </ul>
           </div>
