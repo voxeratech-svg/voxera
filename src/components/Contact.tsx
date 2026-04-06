@@ -65,7 +65,12 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground mb-1">E-posta</h4>
-                  <p className="text-foreground/50 text-sm">voxeratech@gmail.com</p>
+                  <a
+                    href="mailto:voxeratech@gmail.com"
+                    className="text-foreground/50 text-sm hover:text-primary transition-colors"
+                  >
+                    voxeratech@gmail.com
+                  </a>
                 </div>
               </div>
             </div>

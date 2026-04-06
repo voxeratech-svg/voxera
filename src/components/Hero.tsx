@@ -97,9 +97,13 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <button
+        onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+        aria-label="İletişim bölümüne git"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer group"
+      >
         <svg
-          className="w-6 h-6 text-primary/50"
+          className="w-6 h-6 text-primary/50 group-hover:text-primary transition-colors duration-200"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -111,7 +115,7 @@ export default function Hero() {
             d="M19 14l-7 7m0 0l-7-7m7 7V3"
           />
         </svg>
-      </div>
+      </button>
     </section>
   );
 }
