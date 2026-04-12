@@ -40,14 +40,16 @@ export default function Footer({
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href={`/${lang}`} className="flex items-center gap-3 mb-4">
-              <Image
-                src="/logo-icon.png"
-                alt="VoxeraTech - Yazılım Çözümleri"
-                width={36}
-                height={20}
-                className="w-[36px] h-auto"
-              />
+            <Link href={`/${lang}`} className="flex items-center gap-3 mb-4 min-w-0">
+              <span className="relative block h-5 w-9 shrink-0">
+                <Image
+                  src="/logo-icon.png"
+                  alt="VoxeraTech - Yazılım Çözümleri"
+                  fill
+                  sizes="36px"
+                  className="object-contain object-left"
+                />
+              </span>
               <div>
                 <span className="text-base font-bold tracking-wide text-foreground">
                   VOXERA<span className="text-primary">TECH</span>

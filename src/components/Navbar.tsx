@@ -41,23 +41,28 @@ export default function Navbar({ dict, lang }: { dict: NavDict; lang: string }) 
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href={`/${lang}`} className="flex items-center gap-3 group">
-            <Image
-              src="/logo-icon.png"
-              alt="VoxeraTech - Yazılım Çözümleri"
-              width={90}
-              height={49}
-              className="w-[90px] h-auto"
-              priority
-            />
-            <div className="hidden sm:block">
-              <span className="text-lg font-bold tracking-wide text-foreground group-hover:text-primary transition-colors">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ps-[max(1rem,env(safe-area-inset-left))] pe-[max(1rem,env(safe-area-inset-right))] pt-[env(safe-area-inset-top)]">
+        <div className="flex items-center justify-between min-h-20 py-2 gap-3">
+          {/* Logo — same structure on all breakpoints so the mark does not jump at sm */}
+          <Link
+            href={`/${lang}`}
+            className="flex min-w-0 shrink items-center gap-2 sm:gap-3 group"
+          >
+            <span className="relative block h-9 w-[4.5rem] shrink-0 sm:h-11 sm:w-[5.625rem]">
+              <Image
+                src="/logo-icon.png"
+                alt="VoxeraTech - Yazılım Çözümleri"
+                fill
+                sizes="(max-width: 640px) 72px, 90px"
+                className="object-contain object-left"
+                priority
+              />
+            </span>
+            <div className="min-w-0 text-left">
+              <span className="block text-sm font-bold tracking-wide text-foreground group-hover:text-primary transition-colors sm:text-lg">
                 VOXERA<span className="text-primary">TECH</span>
               </span>
-              <p className="text-[10px] tracking-[0.2em] text-foreground/50 uppercase">
+              <p className="hidden text-[10px] tracking-[0.2em] text-foreground/50 uppercase sm:block">
                 Software Solutions
               </p>
             </div>

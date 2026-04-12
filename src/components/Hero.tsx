@@ -30,7 +30,7 @@ export default function Hero({ dict, lang }: { dict: HeroDict; lang: string }) {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden grid-bg"
+      className="relative min-h-dvh flex items-center justify-center overflow-hidden grid-bg pt-[calc(env(safe-area-inset-top)+6.5rem)] pb-24 md:pt-[calc(env(safe-area-inset-top)+11rem)] md:pb-24"
     >
       {/* Background gradient orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[128px] animate-pulse" />
@@ -43,14 +43,14 @@ export default function Hero({ dict, lang }: { dict: HeroDict; lang: string }) {
         }`}
       >
         {/* Logo icon */}
-        <div className="flex justify-center mb-8">
-          <div className="relative">
+        <div className="flex justify-center mb-8 px-1">
+          <div className="relative mx-auto aspect-[220/120] w-full max-w-[min(220px,calc(100vw-2rem))] sm:max-w-[260px]">
             <Image
               src="/logo-icon.png"
               alt="VoxeraTech - Yazılım Çözümleri"
-              width={220}
-              height={120}
-              className="w-[220px] h-auto"
+              fill
+              sizes="(max-width: 640px) min(220px, 100vw - 2rem), 260px"
+              className="object-contain"
               priority
             />
           </div>
