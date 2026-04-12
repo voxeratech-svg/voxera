@@ -17,7 +17,6 @@ interface HeroDict {
   indicator1Sub: string;
   indicator2Title: string;
   indicator2Sub: string;
-  scrollLabel: string;
 }
 
 export default function Hero({ dict, lang }: { dict: HeroDict; lang: string }) {
@@ -96,41 +95,18 @@ export default function Hero({ dict, lang }: { dict: HeroDict; lang: string }) {
         </div>
 
         {/* Bottom indicators */}
-        <div className="mt-16 flex items-center justify-center gap-12 text-sm text-foreground/30">
-          <div className="text-center">
-            <p className="text-2xl font-bold text-primary">01</p>
-            <p className="mt-1">{dict.indicator1Title}</p>
-            <p className="text-xs">{dict.indicator1Sub}</p>
+        <div className="mt-16 flex flex-wrap items-center justify-center gap-x-12 gap-y-6 text-sm text-foreground/30">
+          <div className="text-center min-w-[10rem] max-w-xs">
+            <p>{dict.indicator1Title}</p>
+            <p className="text-xs mt-1">{dict.indicator1Sub}</p>
           </div>
-          <div className="w-px h-12 bg-border" />
-          <div className="text-center">
-            <p className="text-2xl font-bold text-primary">02</p>
-            <p className="mt-1">{dict.indicator2Title}</p>
-            <p className="text-xs">{dict.indicator2Sub}</p>
+          <div className="hidden sm:block w-px h-12 bg-border shrink-0" aria-hidden />
+          <div className="text-center min-w-[10rem] max-w-xs">
+            <p>{dict.indicator2Title}</p>
+            <p className="text-xs mt-1">{dict.indicator2Sub}</p>
           </div>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <button
-        onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-        aria-label={dict.scrollLabel}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer group"
-      >
-        <svg
-          className="w-6 h-6 text-primary/50 group-hover:text-primary transition-colors duration-200"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"
-          />
-        </svg>
-      </button>
     </section>
   );
 }

@@ -16,6 +16,7 @@ interface NavDict {
   about: string;
   services: string;
   projects: string;
+  contact: string;
 }
 
 export default function Footer({
@@ -32,6 +33,7 @@ export default function Footer({
     { href: `/${lang}/hakkimizda`, label: navDict.about },
     { href: `/${lang}/hizmetlerimiz`, label: navDict.services },
     { href: `/${lang}/projeler`, label: navDict.projects },
+    { href: `/${lang}/iletisim`, label: navDict.contact },
   ];
 
   return (
